@@ -4,7 +4,11 @@
 </head>
 <body>
   <p>Welcome to the chat app! You will chat like never before!</p>
-
+  <form id="message-form">
+    <input id="message-input" name="message" type="text" placeholder="Message"/>
+    <button id="message-send">Send</button>
+  </form>
   <script src="/socket.io/socket.io.js"></script>
   <script src="/js/app.js"></script>
+  <script src="/js/modules/send-message.js"></script>
 </body>
