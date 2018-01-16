@@ -5,11 +5,7 @@ socket.on('connect', function () {
 });
 
 socket.on('newMessage', function (message) {
-  const messages = document.querySelector('#messages');
-  const newMessage = document.createElement('p');
-  const messageText = document.createTextNode(message.from + ': "' + message.text + '"');
-  newMessage.appendChild(messageText);
-  messages.appendChild(newMessage);
+  displayMessage(message);
 });
 
 socket.on('disconnect', function () {
